@@ -1,7 +1,18 @@
 import React from 'react';
 
+import { BrowserRouter } from 'react-router-dom';
+
+import Routes from './routers';
+
+import GlobalStyles from './styles/globalStyles';
+
 const App: React.FC = () => {
-  return <h1> Wiser </h1>;
+  return (
+    <BrowserRouter>
+      <GlobalStyles />
+      <Routes />
+    </BrowserRouter>
+  );
 };
 
 export default App;
