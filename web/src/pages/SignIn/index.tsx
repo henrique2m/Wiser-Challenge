@@ -57,6 +57,7 @@ const SignIn: React.FC = () => {
 
   return (
     <Container>
+      <aside />
       <div>
         <Content>
           <header>

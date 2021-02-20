@@ -28,7 +28,6 @@ export const Container = styled.div`
 
 export const ContainerInput = styled.div<ContainerInputProps>`
   width: 256px;
-  max-width: 256px;
   height: 48px;
   display: flex;
   align-items: center;
@@ -65,13 +64,15 @@ export const ContainerInput = styled.div<ContainerInputProps>`
     color: #383e71;
 
     &::placeholder {
-      display: flex;
-      justify-content: center;
       color: #989fdb;
     }
   }
 
   svg {
     margin-left: 6px;
+  }
+
+  @media (min-width: 668px) and (max-width: 801px) {
+    width: 297px;
   }
 `;
