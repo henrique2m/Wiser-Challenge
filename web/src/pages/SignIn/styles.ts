@@ -10,40 +10,32 @@ export const Container = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding: 0 2.8rem 4rem;
-
   background-image: linear-gradient(to bottom, transparent 0%, #130525 50%),
     url(${BackgroundMobile});
   background-repeat: no-repeat;
   background-size: 100%;
-
   > div {
     background: transparent;
   }
-
   footer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 4rem;
-
     margin-top: 3rem;
-
     p {
       width: 212px;
       height: 40px;
       font-size: 14px;
       line-height: 20px;
       text-align: center;
-
       color: #ffffff;
-
       a {
         font-size: 14px;
         line-height: 20px;
         color: #ffffff;
         text-decoration: none;
-
         span {
           text-decoration: underline;
           margin-left: 4px;
@@ -63,14 +55,12 @@ export const Content = styled.main`
   background: #faf5ff;
   border-radius: 8px;
   padding: 0 28px;
-
   header {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 26px;
-
     h1 {
       width: 10rem;
       height: 6.4rem;
@@ -80,7 +70,6 @@ export const Content = styled.main`
       color: #383e71;
     }
   }
-
   > span {
     font-weight: 600;
     font-size: 12px;
@@ -88,14 +77,12 @@ export const Content = styled.main`
     text-align: center;
     margin-bottom: 26px;
   }
-
   form {
     display: flex;
     height: 100%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
     button {
       margin-top: 30px;
       margin-bottom: -24px;

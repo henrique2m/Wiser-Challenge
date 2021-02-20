@@ -65,6 +65,8 @@ export const ContainerInput = styled.div<ContainerInputProps>`
     color: #383e71;
 
     &::placeholder {
+      display: flex;
+      justify-content: center;
       color: #989fdb;
     }
   }

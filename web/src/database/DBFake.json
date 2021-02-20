@@ -1,0 +1,9 @@
+{
+  "users": [{
+      "id": "9217398127398129732189387912837981",
+      "name": "Wiser",
+      "email": "wiser@wisereducacao.com",
+      "password":"12345678",
+      "token": "fake-token-9217398127398129732189387912837981"
+  }]
+}

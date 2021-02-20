@@ -1,10 +1,15 @@
 import React, { useCallback, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
+
+import { loadRequest } from '../../store/ducks/auth/actions';
+import { AuthUserState } from '../../store/ducks/auth/types';
+
 import getValidationsErros from '../../utils/getValidationErrors';
 
 import { Container, Content } from './styles';
@@ -14,31 +19,42 @@ interface SignInFormData {
   password: string;
 }
 
+interface AuthUser {
+  AuthUser: AuthUserState | undefined;
+}
+
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
+  const dispatch = useDispatch();
 
-  const handleSubmit = useCallback(async (data: SignInFormData) => {
-    try {
-      formRef.current?.setErrors({});
+  const { AuthUser } = useSelector((state: AuthUser) => state);
 
-      const schema = Yup.object().shape({
-        email: Yup.string()
-          .required('Informe o e-mail de cadastro.')
-          .email('Digite um e-mail válido.'),
-        password: Yup.string().required('Digite sua senha.'),
-      });
+  const handleSubmit = useCallback(
+    async (data: SignInFormData) => {
+      try {
+        formRef.current?.setErrors({});
 
-      await schema.validate(data, { abortEarly: false });
+        const schema = Yup.object().shape({
+          email: Yup.string()
+            .required('Informe o e-mail de cadastro.')
+            .email('Digite um e-mail válido.'),
+          password: Yup.string().required('Digite sua senha.'),
+        });
 
-      console.log(data);
-    } catch (err) {
-      if (err instanceof Yup.ValidationError) {
-        const errors = getValidationsErros(err);
+        await schema.validate(data, { abortEarly: false });
 
-        formRef.current?.setErrors(errors);
+        dispatch(loadRequest(data));
+      } catch (err) {
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationsErros(err);
+
+          formRef.current?.setErrors(errors);
+        }
       }
-    }
-  }, []);
+    },
+    [dispatch],
+  );
+
   return (
     <Container>
       <div>
@@ -62,7 +78,9 @@ const SignIn: React.FC = () => {
               placeholder="*******"
             />
 
-            <Button type="submit"> ENTRAR </Button>
+            <Button type="submit" loading={!!AuthUser?.loading}>
+              ENTRAR
+            </Button>
           </Form>
         </Content>
 
