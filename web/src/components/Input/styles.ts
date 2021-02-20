@@ -72,7 +72,7 @@ export const ContainerInput = styled.div<ContainerInputProps>`
     margin-left: 6px;
   }
 
-  @media (min-width: 668px) and (max-width: 801px) {
+  @media (min-width: 668px) {
     width: 297px;
   }
 `;

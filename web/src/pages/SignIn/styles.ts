@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import BackgroundMobile from '../../assets/background-mobile.png';
 import BackgroundTablet from '../../assets/background-tablet.png';
+import BackgroundDesktop from '../../assets/background-desktop.png';
 
 export const Container = styled.div`
   width: 100vw;
@@ -54,7 +55,7 @@ export const Container = styled.div`
     }
   }
 
-  @media (min-width: 668px) and (max-width: 801px) {
+  @media (min-width: 668px) {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -115,6 +116,27 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media (min-width: 1172px) {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #faf5ff;
+    padding: 0;
+
+    > aside {
+      background-image: linear-gradient(to bottom, transparent 0%, #130525 90%),
+        url(${BackgroundDesktop});
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      height: 100%;
+      width: 765px;
+    }
+  }
 `;
 
 export const Content = styled.main`
@@ -164,7 +186,7 @@ export const Content = styled.main`
     }
   }
 
-  @media (min-width: 668px) and (max-width: 801px) {
+  @media (min-width: 668px) {
     width: 297px;
     display: flex;
     justify-content: center;

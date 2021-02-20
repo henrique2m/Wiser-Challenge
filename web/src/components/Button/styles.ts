@@ -28,7 +28,7 @@ export const Container = styled.button<ButtonProps>`
     );
   }
 
-  @media (min-width: 668px) and (max-width: 801px) {
+  @media (min-width: 668px) {
     box-shadow: 0px 10px 25px #cf99db;
     width: 297px;
   }
