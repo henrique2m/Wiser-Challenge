@@ -1,4 +1,8 @@
-
+<p align="center">
+    <img src="https://raw.githubusercontent.com/henrique2m/Wiser-Challenge/main/docs/logo-wiser.png" width="100" />
+    </br>
+    <h1 align="center">Wiser Educação</h1> 
+</p>
 
 ## :rocket: Sobre o desafio
 Seu objetivo será criar uma aplicação de login, ou seja, acesso de um usuário. O
@@ -39,15 +43,49 @@ seu uso de padrões, construção de componentes, como as tecnologias foram util
 performance da aplicação. O objetivo é analisar a capacidade de aplicar seu conhecimento
 de acordo com sua experiência.
 
+#
 
-# 
+# Resultado do desafio
+## Especificações 
+
+### Aplicação web
+- Primeiro é necessário executar o comando **`yarn`** dentro da pasta **`web`**, assim todas as dependências serão instaladas.
+
+- O próximo passo é executar o comando **`json:server`**, para que uma API fake seja instânciada.
+
+- Agora execute o comando **`yarn start`** para instânciar a aplicação web.
+
+- Para fazer login na aplicação utilize o email ( **`wiser@wisereducacao.com`**) e a senha (**`12345678`**).
+
+### Aplicação mobile
+- Primeiro é necessário executar o comando **`yarn`** dentro da pasta **`mobile`**, assim todas as dependências serão instaladas.
+
+- O próximo passo é executar o comando **`yarn android`**, para que o aplicativo seja instalado em um emulador ou celular. Obs.: "**Aplicação só foi testada no sistema operacional android**".
 
 
+- Para fazer login na aplicação utilize o email ( **`wiser@wisereducacao.com`**) e a senha (**`12345678`**).
+
+#
+
+## Layout web
+
+![Tela - 1 - Mockup](https://raw.githubusercontent.com/henrique2m/Wiser-Challenge/main/docs/screens/mockup.png)
+![Tela - 1 - Mockup](https://raw.githubusercontent.com/henrique2m/Wiser-Challenge/main/docs/screens/web_mobile/screen1.png)
+![Tela - 1 - Mockup](https://raw.githubusercontent.com/henrique2m/Wiser-Challenge/main/docs/screens/web_mobile/screen2.png)
+![Tela - 1 - Mockup](https://raw.githubusercontent.com/henrique2m/Wiser-Challenge/main/docs/screens/tablet/screen1.png)
+![Tela - 1 - Mockup](https://raw.githubusercontent.com/henrique2m/Wiser-Challenge/main/docs/screens/tablet/screen2.png)
 ![Tela - 1](https://raw.githubusercontent.com/henrique2m/Wiser-Challenge/main/docs/screens/desktop/screen1.png)
 ![Tela - 2](https://raw.githubusercontent.com/henrique2m/Wiser-Challenge/main/docs/screens/desktop/screen2.png)
 ![Tela - 3](https://raw.githubusercontent.com/henrique2m/Wiser-Challenge/main/docs/screens/desktop/screen3.png)
 
 
+## Layout mobile
+
+![Tela - 1 - Mockup](https://raw.githubusercontent.com/henrique2m/Wiser-Challenge/main/docs/screens/mobile/screen1.png)
+![Tela - 1 - Mockup](https://raw.githubusercontent.com/henrique2m/Wiser-Challenge/main/docs/screens/mobile/screen2.png)
+
+
+
 ## License
 
-MIT © [Henrique Moreira](https://github.com/henrique2m)
+MIT © [Henrique Moreira](https://www.linkedin.com/in/henrique-moreira-51699618b/)
